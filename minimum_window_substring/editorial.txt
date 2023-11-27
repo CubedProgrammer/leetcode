@@ -1,0 +1,13 @@
+Keep two frequency arrays, one for t, and one for looping through s.
+Loop through t to fill its frequency array.
+Make a second array the same length as s. This will store the length of possible substrings starting at each index of s.
+Find the first letter in s that is also in t using the frequency array, this will be our starting point.
+Use a variable to keep track of where we start, loop through s from that point.
+Insert each letter we see into the frequency array for s.
+Let ch be the letter we just inserted, if ch in the frequency array for s is greater than in t, move the starting point.
+The starting point should be moved as far right as possible, without dropping any frequency in s to lower than in t.
+If all the frequencies in s are greater than or equal to in t, we have a valid substring.
+By the previous step, this is the smallest ending at our current index, since we moved start as far right as possible.
+Record this in array of substring lengths. If the length is the same as t, break.
+Loop through array of substring lengths, find the minimum non-zero length, return the corresponding substring.
+If there is no valid substring, return empty string.
