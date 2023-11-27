@@ -1,0 +1,8 @@
+First find the least common multiple of a and b.
+Then construct an array of the multiples of a and b in increasing order up to the lcm.
+To do this, assume a is less than b, loop from a to the lcm, and insert the multiple of a to the array.
+If the current multiple of a is greater than the current multiple of b, insert the current multiple of b instead.
+Then go to the next multiple of b, do not move to the next multiple of a.
+Keep track of the number of multiples of a and b up to the lcm, including zero.
+For example, if a=6, b=8, then the array contains 0, 6, 8, 12, 16, 18.
+Then, the magical number is lcm * (n / cnt) + array at index n modulo cnt. Where cnt is the length of the array.

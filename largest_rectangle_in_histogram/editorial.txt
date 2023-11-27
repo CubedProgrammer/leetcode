@@ -1,0 +1,8 @@
+Create two arrays to store the previous lesser element and next lesser element.
+To build these arrays, create a stack, loop through the heights array.
+Remove from the stack until it is empty or the top element is less than current element.
+The previous lesser element will be at the top of the stack, record it in the array, or -1 if stack is empty.
+Do the same for the next lesser element, loop backwards instead, and use heightsSize if stack is empty.
+Do note that we don't store the values themselves in the stack or either of the two arrays, but the indices.
+After both arrays have been built, loop through all the heights, query the previous and next lesser indices.
+The width of the rectangle is next - previous - 1, the height is the height of the bar. Find the maximum of all of these.
