@@ -1,0 +1,5 @@
+Another monotonic stack problem.
+Build the arrays for next greater or equal element and previous greater or equal element.
+Loop forwards in the height array, keep track of height of previous great element.
+Rain will be collected from the current great element to the next element greater or equal to the current.
+Repeat until last largest element. Then loop backwards towards the last largest element and do the same in reverse.
