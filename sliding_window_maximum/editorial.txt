@@ -1,0 +1,13 @@
+This problem requires the use of a sparce table.
+Make a table for the maximum of ranges of size 2, 4, 8, and so on, up to k, for every starting index.
+So index 0 would have maximum of indices of 0 and 1, then 0 through 3, then 0 through 7 and so on.
+Then, for every index i, the maximum between i, inclusive, and i+k, exclusive, do the following.
+Let m be the greatest power of 2 less than k, query the table for the range [i,i+m-1] and [i+k-m,i+k-1].
+The maximum of those two is the maximum of the desired range at index i.
+Example: n = 9, k = 6
+2 3 9 1 6 7 4 8 5
+Building the table, we get:
+3 9 9 6 7 7 8 8
+9 9 9 7 8 8
+4 is the largest power of 2 less than 6, now we query for ranges of size 6.
+9 9 9 8
