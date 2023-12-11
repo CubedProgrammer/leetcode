@@ -1,0 +1,8 @@
+Loop through the array with a binary search tree.
+The binary search tree will contain the numbers in a subarray of length indexDiff + 1.
+After inserting an element, check if it is already in, if not, check if the element before and after are in range.
+If not, continue looping through the array. If the conditions are never met, return false.
+To build this tree, while looping through the array, if the index is bigger than indexDiff, remove nums[i - indexDiff - 1].
+Then insert current element into the tree.
+Before the loop, insert a very small number and a very large number into the tree.
+This is so every element has an element before and after, the integer minimum and maximum should work.
