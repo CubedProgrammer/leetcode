@@ -1,0 +1,2 @@
+Simply generating the starting sequence of digits and running the next_permutation algorithm on it repeatedly will do.
+The inputs are small enough that this will work.
