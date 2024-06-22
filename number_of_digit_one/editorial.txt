@@ -1,0 +1,21 @@
+The problem can be decomposed by breaking the number into its digits.
+Then, starting from the least significant digit, the ones digit, if it's at least a 1, then add one to the total.
+Move to the digit to the left, since there is 1 one between 0 and 9, add the digit to the total.
+Then, we have to consider when the tens digit of a number is one.
+If the tens digit of the number is more than 1, add 10 to the total, since there are 10 numbers 10 to 19.
+The ones digit in 11 was already counted in the ones digit step.
+If the tens digit is exactly 1, then the numbers 10 to n%100 must be counted, there are n%10+1 numbers between 10 and n%100.
+Then, move left to the hundreds digit, there are 20 ones in all the numbers 0 to 99, add the digit times 20 to the total.
+Again, if the digit is more than 1, add 100, for 100-199, if it is exactly 1, add n%100+1.
+The process repeats.
+The number of ones between 0 and 9 is 1, the number of ones between 0 and 99 can be computed easily.
+There are 10 blocks of 0 to 9 between 0 and 99, so there are 10, then another 10 from 10 to 19.
+The number of ones between 0 and 999 can be computed similarly.
+There are 10 blocks of 0 to 99, so there are 10*20=200, then another 100 from 100 to 199.
+To calculate the number of ones between 0 and 10^k-1, multiply the previous total by 10, then add 10^(k-1).
+Note the k starts at 0, so the first count is the number of ones between 0 and 0, which is obviously 0.
+Using 6174 as an example.
+1 one for 4.
+For 70, 7*1=7, +10 because 7 is more than 1, for a total of 18.
+For 100, 1*20=20, +74+1 because 1 is exactly 1, for a total of 113.
+For 6000, 6*300=1800, +1000 because 6 is more than 1, for a total of 2913.
