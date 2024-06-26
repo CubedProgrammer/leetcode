@@ -1,0 +1,15 @@
+This problem is about peaks and valleys.
+A valley is a position in the array such that both its adjacent elements are greater than its own element.
+However, to deal with equivalent elements, the requirement will be strictly greater for left, and greater equal for right.
+Valleys are important because they can be assigned one candy.
+
+Find the first valley, then from the first valley, find the next valley.
+Assign 1 to the first valley and keep track of the number of candies handed out previously, call this value k.
+If the element to the right is greater, increase k by 1, if it is equal, reset k by 1.
+Move to the right until the element to the right is less, this will be the peak.
+Then start from the second valley and move left, reset the value of k, and increase or reset k like before.
+Stop at the peak, the number of candies at the peak should be the larger of the two candy counts.
+For example, if k is 10 at the peak from the left, and k is 12 from the right, assign the larger, 12, to the peak.
+
+Make sure not to negelect the region from the beginning to the first valley, and from the final valley to the end.
+Sum the array for the total amount of candy.
