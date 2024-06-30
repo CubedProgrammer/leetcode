@@ -1,0 +1,6 @@
+Shove all elements of the array into an order statistic tree.
+For every element k in the array, get the rank of k from the OST, that is, how many elements are less than k.
+Then remove k from the tree.
+
+Normally a binary search tree is required for order statistics, but we can cheese with binary indexed tree.
+Since all elements are integers of a small range.
