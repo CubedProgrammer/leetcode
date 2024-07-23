@@ -1,0 +1,4 @@
+Bézout's identity tells us that for two numbers m and n, let k = gcd(m, n), am+bn=ck for some integers a, b, and c.
+Moreover, this is true for all integers a and b, and there exists two values for a and be such that c=1.
+This can be extended to three or more numbers, which is exactly the problem we have.
+Perform reduce on the array using gcd and check if it is one.
