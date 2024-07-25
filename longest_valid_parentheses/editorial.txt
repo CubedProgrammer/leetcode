@@ -1,0 +1,7 @@
+Have a counter, call this counter k.
+Loop through the string, increment k if open bracket, decrement if close bracket.
+Keep two pointers to beginning and one-past-the-end, both initially at the first character.
+During the loop, if the counter k ever reaches zero, move end pointer to the next character.
+If k is ever negative, the current sequence cannot be continued, set begin and end pointers to the next character.
+This will miss the final sequence if k is positive, do the same thing as above, but in reverse.
+Return the length of the longest of these sequences from both runs.
