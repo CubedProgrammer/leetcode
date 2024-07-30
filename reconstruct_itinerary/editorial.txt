@@ -1,0 +1,7 @@
+Shove all the edges inside a binary search tree.
+The binary search tree will ensure the path is lexicographically least.
+Recursively search the graph depth-first, remove a flight after it has been traversed.
+If a path is unsuccessful, meaning there are flights remaining but the current location is a dead end, return false.
+If a recursive call on one flight returns false, try the next flight, if all flights are false, return false.
+Make sure to add the flight back to the graph after it fails.
+Also make sure to add the visited cities to a vector, and pop the back when flights fail.
