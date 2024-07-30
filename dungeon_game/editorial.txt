@@ -1,0 +1,17 @@
+We will check if a certain amount of health, x, can survive.
+If we know the most health remaining at a certain cell, we do not care about the path, it is irrelevant.
+We can find the least damage required to get from that cell, to the destination, the sum would be the minimum damage taken.
+This is clearly a dynamic programming problem. Have the matrix store the most health remaining to get to the cell.
+For each cell, if the most health remaining is unknown, it is the value of that cell plus the maximum of the top and left.
+The heath at the top left is just its own value, plus the initial health.
+For example, with a starting health of 6
+-1 -3
+-2 -4
+Should become
+5 2
+3 -1
+The bottom right is -1 because it is -4, the value of that cell, plus the maximum of the top cell and left cell.
+In this case, maximum of 3 and 2 is 3.
+Since the bottom right is -1, we do not survive.
+To take care of the case where we die in the middle, set the value to a really low negative number.
+This will ensure no path through that cell is ever considered again.
