@@ -1,0 +1,4 @@
+Do a nested for loop over every possible unordered pair of points.
+Calculate the line Ax+By=C, and store A, B, and C in a tuple, store the tuple in a frequency table.
+After the loop, find the highest value in the frequency table, it will be the answer choose 2.
+Just make sure that there is more than one point before running this algorithm.
