@@ -1,0 +1,14 @@
+Create a prefix sum array along one dimension of the matrix, except reset the sum at zero.
+For example
+10100
+10111
+11111
+10010
+becomes
+10100
+10123
+12345
+10010
+Each cell stores how many consecutive ones are before it, including itself.
+Then run the largest rectangle in histogram algorithm along the other dimension.
+In this case, run it on every column, the largest rectangle in all the columns is the answer.
