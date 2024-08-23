@@ -1,0 +1,16 @@
+Create a vector of vertical lines from the buildings, they may be represented as tuples of position, height, left/right.
+This vector needs to be sorted, but first, we have to think about tiebreaks for when two lines have the same position.
+We will be looping through the vertical edges of the buildings left to right, and connecting dots.
+If two left edges have the same position, we want to connect the previous point to the higher of the two edges.
+If two different types of edges have the same, we want to encounter the left one first.
+Otherwise, we may incorrectly connect to a point too low, if the left edge is higher than the current highest building.
+If two right edges have the same position, we want to see the lower one first.
+This way we cannot connect the higher one to the lower one.
+After sorting the vector, we need a multiset to store the heights, so we know where to connect.
+Initially, put a zero in the multiset.
+Loop through the vector of vertical edges.
+If the edge is a left edge, connect to its top if it is the highest building.
+Add it to the set whether or not it is the highest, also use the set to check if it is the highest.
+If it is a right edge, remove one instance of its height from the multiset.
+Then, check if its height is higher than all the remaining buildings, if it is, connect to the highest remaining.
+Connect means to record a point on the skyline.
