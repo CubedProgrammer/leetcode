@@ -1,0 +1,13 @@
+This is a dynamic programming problem, with a two-dimensional matrix to store the results.
+Let r be the row and c be the column, and the matrix be res, res[r][c] will store if p[0,r] matches s[0,c].
+First, we must sanity check for if either s or p is empty.
+After that, for res[0][0] is simply if the first character of p matches the first of s.
+The rest of the first row of res is if the first character of p matches any prefix of s.
+That can only be true if p[0] is *.
+The rest of the first column of res is if any prefix of p matches the first character of s.
+That can only be true if the pattern contains exactly one question mark or the first character of s, and the rest stars.
+Loop through the rest of the answer matrix column by column, check the character of p corresponding to the row.
+If it is a star, then it matches if the previous p matches any of s up to this column.
+If it is a question mark, then it matches if the previous p matches the previous s.
+If it is a character, then same as above, except s at this column must have the same character.
+Return the bottom right of the matrix.
