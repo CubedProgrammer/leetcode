@@ -1,0 +1,8 @@
+Create a palindrome using the first half of the number, rounding up.
+If it is bigger than the original number, create another palindrome that is smaller, and vice versa.
+To create the other palindrome, increment or decrement the first half of the number by one.
+Then copy the digits after in reverse order, beware of carrying or borrowing around powers of ten.
+Return the closer palindrome.
+If the number is already a palindrome, first check if it is a single digit, if so return the previous number.
+Then, subtract and add one from the middle and copy the most significant digits in reverse order to the right.
+Again beware of carrying or borrowing.
