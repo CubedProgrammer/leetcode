@@ -1,0 +1,5 @@
+Loop over the string and keep tabs on which part of the number you are in.
+If there is an E, change to exponential part, unless already at exponential, then return false.
+If there is a period, change to fractional part, if not at integral part, then return false.
+Make sure the signs only appear where they are allowed.
+Also make sure there are digits before and after the e.
