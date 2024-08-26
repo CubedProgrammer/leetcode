@@ -1,0 +1,5 @@
+This is an order statistics tree problem.
+If there is only one number, return zero, as there are no pairs to begin with.
+Insert the first number into the tree, then loop from the second element of the array.
+At each step, query the tree for how many are large enough, and add the current number to the tree.
+Beware of overflow.
