@@ -1,0 +1,6 @@
+Prefix sum array the numbers, then perform merge sort on the new array.
+Except before the merge, binary search for the right half in the left half.
+Specifically, for every element in the right half, find how many sums in the left half are in range.
+Since they need to be subtracted, let M be a value in the right half.
+Look for numbers in the range of [M - upper, M - lower].
+Beware of overflow.
