@@ -1,0 +1,4 @@
+The sum of k consecutive numbers is of the form kn + k * (k - 1) / 2 for some integer n.
+The k + k * (k - 1) / 2 is the minimum requirement for the number, n must be at least 1.
+We can loop until the above is larger than the number given, and increment a counter when a number matches the form.
+We can check using modular arithmetic.
