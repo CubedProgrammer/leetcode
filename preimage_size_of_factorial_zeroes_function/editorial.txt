@@ -1,0 +1,8 @@
+Build an array starting from 1, the next element is the previous multipled by 5, plus 1.
+Take the number k, go through the array in descending order, if k is -1 mod the current number, return 0.
+Otherwise, repeat with the next number with the remainder of k divided by the last number.
+If you get to one, return 5.
+Example k=60
+The array goes 1, 6, 31, 156, ...
+60 mod 31 is 29, keep going.
+29 mod 6 is 5, so return 0;
