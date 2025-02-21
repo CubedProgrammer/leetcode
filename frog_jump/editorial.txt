@@ -1,0 +1,7 @@
+This is a dynamic programming problem.
+However, the trick here is that at every stone, we must store every possible last distance jumped to reach it, since that affects what we can reach.
+Using an array to store the last distances is fine, but to avoid duplicates, we can use a hash set instead.
+We will create a map of sets, mapping integers to sets, with the keys being the positions of the stones and all sets starting out as empty.
+Except for the set corresponding to the second stone, which we will hard code as having a previous jump distance of one.
+Then, loop through the map and create all the possible jumps, inserting the jump distance into the set for the next stone.
+If the last stone's previous-distance set is not empty, we can cross, otherwise, we cannot.
