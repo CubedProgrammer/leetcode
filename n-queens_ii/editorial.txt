@@ -1,0 +1,8 @@
+Each file will have one queen.
+Make an array of size n, the ith element of the array indicating the position of the queen in file i.
+Go through the array, check if the queen in the current file attacks any queen in any previous files.
+If it does, move the queen down and repeat, otherwise, move on to the next file.
+If the final file is reached and no queens attack, add this position to the list of positions.
+Remember to still move the queen in the final file down to not stay in one position.
+If a queen in a file is at the bottom, move it back up to the top and move the queen in the previous file down.
+Unless that queen is in the first file, then we are finished.
