@@ -1,0 +1,8 @@
+This is a 2D dynamic programming problem, create a 2D array strlen(s) + 1 by strlen(p) + 1.
+The empty string matches the empty pattern, set (0,0) to true in the array.
+The empty string also matches wildcard patterns, set that in the array too.
+Then, at any position in the 2D array, if the corresponding character in the pattern is not * or ., check exact match.
+If the character in the pattern is ., then the value in the array is the same as it is in the position 1 previous in both directions.
+If the character is *, check if the pattern matches the string with the last two characters removed.
+If it does not, then go through the string backwards, making sure that each character visited match the character before the *, if at any point the string matches the pattern, there is a match.
+Return the array at its highest position in both dimensions.
