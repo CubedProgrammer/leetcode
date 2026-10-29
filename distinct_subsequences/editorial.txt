@@ -1,0 +1,5 @@
+Two dimensional dynamic programming. WLOG, let there be more columns than rows, or equal number.
+Let (m, n) be a position in the cache array, specifically, it has m rows above it, and n columns to its left.
+It will store the number of distinct subsequences for substrings of s and t, call this value q.
+With the substrings being s from 0 to n, exclusive, and t from 0 to m, exclusive.
+Then, if s[n+1] equals t[m+1], that adds q to the count of distinct subsequences for (m+1, n+1).
