@@ -1,0 +1,7 @@
+Two dimensional dynamic programming, the array stores shortest sequence to a certain position at a certain speed.
+The speed can only be a power of 2, positive or negative.
+Then, keep track of a list of unvisited states, start with position 0 and speed 1.
+Then, for every unvisited state, check what would happen if the next in the sequence was A or R.
+Go to these states if they were not already visited, and mark it as length of previous, plus one.
+Then add that state to the list, a queue is the appropriate data structure for this.
+For a query, go through all the states with that position and find the minimum.
