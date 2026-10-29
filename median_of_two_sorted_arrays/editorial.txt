@@ -1,0 +1,16 @@
+A modified binary search algorithm. For each array, keep track of a possible range with a variable for low and high.
+The starting range is the entire array, for both arrays. Like binary search, grab the elements of the middle of both ranges.
+Call the middle elements x and y, both arrays are sorted, x and y are greater than or equal to the elements to their left.
+Compare x and y, suppose y = max(x, y). Let ix and iy be the indices of x and y, respectively.
+Now, we know y is greater than or equal to ix+iy+1 elements, since y >= x, and thus also all elements preceding x.
+If ix+iy+1 is more than half the combined size of both arrays, then y cannot be the median.
+In which case, we reduce the possible range of the array that y came from, to the lower half.
+Otherwise, if ix+iy+1 is at least half, x cannot be the median, reduce its possible range to the higher half.
+Similar story goes if x = max(x, y), at each step, one of the possible ranges is halved.
+Everything outside of the possible ranges is either before the median or after the median.
+Repeat until one of the ranges is empty. Then, the median is at index half minus the lower bound of the empty range.
+Either that, or it is at the lower bound of the empty range.
+If the combined size is even, search both arrays for the other number and take their arithmetic mean.
+Note that this algorithm appears to run in log(m)+log(n) time, and the question requires log(m+n) time.
+However, log(m)+log(n) = log(mn) <= 2log(m+n) = log(m^2+2mn+n^2) for m >= 1 and n >= 1.
+Therefore log(m)+log(n) is in O(log(m+n)).
